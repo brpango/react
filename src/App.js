@@ -1,12 +1,21 @@
+import { Stack } from "@mui/material";
+import { Box } from "@mui/system";
 import "./App.css";
+import Feed from "./components/Feed";
+import Navbar from "./components/Navbar";
+import Rightbar from "./components/Rightbar";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Welcome to my React Tutorial</p>
-      </header>
-    </div>
+    <Box>
+      <Navbar />
+      <Stack direction="row" spacing={2} justifyContent="space-between">
+        <Sidebar />
+        <Feed />
+        <Rightbar />
+      </Stack>
+    </Box>
   );
 }
 
